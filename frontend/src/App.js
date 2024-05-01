@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import JoblyFrontendApp from '../JoblyFrontendApp';
+import JoblyFrontendApp from './JoblyFrontendApp';
 
 
 function App() {
