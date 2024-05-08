@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar'
 
 
-const RootLayout= () => {
+
+const RootLayout= ({firstName, lastName, logoutKey}) => {
+  
+
   return (
     <div>
         
         <header>
-        <NavBar />
+        <NavBar firstName={firstName} lastName={lastName} logoutKey={logoutKey}/>
         </header>
 
         <main>
@@ -19,4 +22,4 @@ const RootLayout= () => {
 };
 
 
-export default RootLayout
+export default RootLayout;

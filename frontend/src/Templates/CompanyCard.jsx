@@ -1,7 +1,11 @@
 import React from 'react';
+import "./JoblyAppStyles.css"
 import { useParams, Navigate } from 'react-router-dom';
+import useConfirmLoggedIn from '../Helpers/useConfirmLoggedIn';
 
 const CompanyCard = ({ companies }) => {
+    useConfirmLoggedIn();
+
     const { handle } = useParams();
 
     const company = companies.find(company => company.handle === handle);
@@ -14,7 +18,7 @@ const CompanyCard = ({ companies }) => {
     return (
 
     <section className="section-container">
-        <div className="company-container">
+        <div className="item-container">
             <p>Name: {company.name}</p>
             <p>Number of Employees: {company.num_employees}</p>
             <p>Description: {company.description}</p>

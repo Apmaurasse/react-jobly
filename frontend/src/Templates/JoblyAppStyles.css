@@ -1,0 +1,60 @@
+.section-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 70px;
+  }
+  
+.item-container {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Rounded borders */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px; /* Padding inside the container */
+  margin-bottom: 20px; /* Spacing between each company */
+  max-width: 600px; /* Set a maximum width */
+  width: 100%; /* Take up full width within its container */
+ }
+
+.title-container {
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #919191,
+      1px 2px 1px #919191,
+      1px 3px 1px #919191,
+      1px 4px 1px #919191, 
+      1px 5px 1px #919191,
+      1px 6px 1px #919191,
+  1px 18px 6px rgba(16,16,16,0.4),
+  1px 22px 10px rgba(16,16,16,0.2),
+  1px 25px 35px rgba(16,16,16,0.2),
+  1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.form-item label {
+  flex: 1; /* Take up all available space */
+  margin-right: 10px; /* Add some spacing between label and input */
+}
+
+.form-item input {
+  flex: 2; /* Take up twice as much space as the label */
+}

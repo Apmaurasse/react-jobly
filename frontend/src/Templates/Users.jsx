@@ -1,6 +1,10 @@
 import React from "react";
+import useConfirmLoggedIn from "../Helpers/useConfirmLoggedIn";
 
 const Users = () => {
+
+    useConfirmLoggedIn();
+
     return (
         <div>
             <h1>

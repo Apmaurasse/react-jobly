@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./CompanyList.css"; // Import the CSS file
+import "./JoblyAppStyles.css"
+import useConfirmLoggedIn from "../Helpers/useConfirmLoggedIn";
+
 
 const CompanyList = ({ companies }) => {
+  useConfirmLoggedIn();
+
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredCompanies = companies.filter(company => {
@@ -21,16 +25,17 @@ const CompanyList = ({ companies }) => {
 
   return (
     <div>
-      <h1>This is the companies page.</h1>
+
+      <section className="section-container">
+      <h1 className="title-container">Companies</h1>
       <input
         type="text"
         placeholder="Search companies..."
         value={searchTerm}
         onChange={handleChange}
       />
-      <section className="section-container">
         {filteredCompanies.map(company => (
-          <div className="company-container" key={company.handle}>
+          <div className="item-container" key={company.handle}>
             <Link to={`/companies/${company.handle}`}>
               <h2>{company.name}</h2>
             </Link>

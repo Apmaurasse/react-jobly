@@ -12,11 +12,15 @@
 .navbar-list {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-end; 
 }
 
 .navbar-item {
     margin: 0 10px;
+}
+
+.navbar-item:last-child {
+    margin-right: 20px; /* Add extra margin to the last item */
 }
 
 .navbar-item a {
