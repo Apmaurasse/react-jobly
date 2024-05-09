@@ -38,15 +38,5 @@
   }
 }
 
-.background-image {
-  position: fixed; /* Ensures the image stays in the background even when scrolling */
-  top: 0;
-  left: 0;
-  width: 100%; /* Cover the entire viewport */
-  height: 100%;
-  z-index: -1; /* Places the image behind all other elements */
-  background-image: url('./JoblyBackground.jpeg'); 
-  background-size: cover; /* Ensures the image covers the entire element */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-}
+
 

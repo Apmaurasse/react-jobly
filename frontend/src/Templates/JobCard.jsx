@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import useConfirmLoggedIn from '../Helpers/useConfirmLoggedIn';
+import "./JoblyAppStyles.css";
 
 
 const JobCard = ({ jobs }) => {
@@ -16,14 +17,16 @@ const JobCard = ({ jobs }) => {
     }
 
     return (
-
+    <div>
     <section className="section-container">
-        <div className="company-container">
+    <h1 className="title-container">Job Info</h1>
+        <div className="item-container">
             <p>Title: {job.title}</p>
             <p>Salary: {job.salary}</p>
             <p>Equity: {job.equity}</p>
         </div>
     </section>
+    </div>
     );
 };
 

@@ -21,7 +21,7 @@ class NavBar extends Component {
                     {/* Display first and last name if available */}
                     {firstName && lastName && (
                         <li className="navbar-item">
-                            {firstName} {lastName}
+                          {firstName} {lastName}
                         </li>
                     )}
                     <li className="navbar-item">
@@ -44,9 +44,6 @@ class NavBar extends Component {
                             </li>
                             <li className="navbar-item">
                                 <Link to="/jobs">Jobs</Link>
-                            </li>
-                            <li className="navbar-item">
-                                <Link to="/users">Users</Link>
                             </li>
                             <li className="navbar-item">
                                 <Link to="/profileeditpage">Profile Edit Page</Link>

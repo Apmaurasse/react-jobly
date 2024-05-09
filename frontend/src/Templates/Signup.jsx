@@ -53,7 +53,7 @@ const Signup = () => {
 
         <h1 className="title-container">Signup</h1>     
 
-        <div>
+
   <form className="form-container" onSubmit={handleSubmit}>
     <div className="form-item">
       <label htmlFor="username">Username:</label>
@@ -107,7 +107,7 @@ const Signup = () => {
 
     <button type="submit">Submit</button>       
   </form>
-</div>
+
 
 
 

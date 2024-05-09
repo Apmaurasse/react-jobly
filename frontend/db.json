@@ -1037,7 +1037,7 @@
     {
       "id": "7da1",
       "username": "test",
-      "first_name": "Test",
+      "first_name": "test",
       "last_name": "test",
       "email": "fakename@notarealemail.com",
       "password": "test",
@@ -1059,6 +1059,15 @@
       "last_name": "Brown",
       "email": "charliebrown123@fakeemail.com",
       "password": "snoopy123",
+      "isAdmin": false
+    },
+    {
+      "id": "aaf4",
+      "username": "secondtest",
+      "first_name": "iforgot",
+      "last_name": "Best",
+      "email": "second@notarealemail.com",
+      "password": "second",
       "isAdmin": false
     }
   ]

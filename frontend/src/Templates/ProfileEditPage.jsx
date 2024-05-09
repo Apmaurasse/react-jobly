@@ -49,7 +49,11 @@ const ProfileEditPage = ({updateKey}) => {
 
     return (
         <div>
+
             <section className="section-container"> 
+
+            <h1 className="title-container">Profile Edit Page</h1> 
+
                 <form className="form-container" onSubmit={handleSubmit}>
                 <div className="form-item">
                         <label htmlFor="id">User id</label> 

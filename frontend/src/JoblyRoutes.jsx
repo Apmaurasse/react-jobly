@@ -8,7 +8,7 @@ import JobCard from "./Templates/JobCard";
 import Login from "./Templates/Login";
 import LoggedOut from "./Templates/LoggedOut";
 import Signup from "./Templates/Signup";
-import Users from "./Templates/Users";
+// import Users from "./Templates/Users";
 import ProfileEditPage from "./Templates/ProfileEditPage";
 import RootLayout from "./Templates/RootLayout";
 
@@ -27,8 +27,8 @@ const JoblyRoutes = ({ companies, jobs, firstName, lastName, loginKey, logoutKey
                 <Route path="/jobs/:id" element={<JobCard jobs={jobs}/>} />
                 <Route path="/login" element={<Login loginKey={loginKey}/>} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/users" element={<Users />} />
-                <Route path="/users/:username" />
+                {/* <Route path="/users" element={<Users />} /> */}
+                {/* <Route path="/users/:username" /> */}
                 <Route path="/profileeditpage/" element={<ProfileEditPage updateKey={updateKey}/>} />
                 <Route path="/logoutconfirmation" element={<LoggedOut />} />
                 <Route path="*" element={<Navigate to="/" />} />
