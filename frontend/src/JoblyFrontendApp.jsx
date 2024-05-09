@@ -25,7 +25,7 @@ const JoblyFrontendApp = () => {
             setFirstName("");
             setLastName("");
         }
-    }, [key]); // Use key as dependency
+    }, [key, firstName, lastName]); // Use key as dependency
 
     useEffect(() => {
         async function fetchData() {
@@ -43,7 +43,7 @@ const JoblyFrontendApp = () => {
             }
         }
         fetchData();
-    }, [key]); // Use key as dependency
+    }, [key, firstName, lastName]); // Use key as dependency
 
     const loginKey = () => {
         setKey(prevKey => prevKey + 1);
@@ -53,13 +53,17 @@ const JoblyFrontendApp = () => {
         setKey(prevKey => prevKey - 1); 
     };
 
+    const updateKey = () => {
+        setKey(prevKey => prevKey + 1);
+    }
+
     if (isLoading) {
         return <p>Loading &hellip;</p>;
     }
 
     return (
         <JoblyProvider key={key}>
-            <JoblyRoutes companies={companies} jobs={jobs} firstName={firstName} lastName={lastName} key={key} loginKey={loginKey} logoutKey={logoutKey}/>
+            <JoblyRoutes companies={companies} jobs={jobs} firstName={firstName} lastName={lastName} key={key} loginKey={loginKey} logoutKey={logoutKey} updateKey={updateKey}/>
         </JoblyProvider>
     );
 }

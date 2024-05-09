@@ -16,7 +16,7 @@ import RootLayout from "./Templates/RootLayout";
 
 
 
-const JoblyRoutes = ({ companies, jobs, firstName, lastName, loginKey, logoutKey}) => { // Receive companies prop
+const JoblyRoutes = ({ companies, jobs, firstName, lastName, loginKey, logoutKey, updateKey}) => { // Receive companies prop
     const router = createBrowserRouter(
         createRoutesFromElements(
             <Route path="/" element={<RootLayout firstName={firstName} lastName={lastName} logoutKey={logoutKey} />}>
@@ -28,7 +28,8 @@ const JoblyRoutes = ({ companies, jobs, firstName, lastName, loginKey, logoutKey
                 <Route path="/login" element={<Login loginKey={loginKey}/>} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/users" element={<Users />} />
-                <Route path="/profileeditpage/" element={<ProfileEditPage />} />
+                <Route path="/users/:username" />
+                <Route path="/profileeditpage/" element={<ProfileEditPage updateKey={updateKey}/>} />
                 <Route path="/logoutconfirmation" element={<LoggedOut />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Route>

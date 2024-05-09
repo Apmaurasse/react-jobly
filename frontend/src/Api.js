@@ -104,6 +104,50 @@ class JoblyApi {
         }
     };
     
+    static async updateUser(userData) {
+        try {
+            // Extract data from userData
+            const { id, username, first_name, last_name, email, password, isAdmin } = userData;
+    
+            // Construct user object with only the fields that are provided
+            const updatedUser = {};
+            if (id !== undefined) {
+                updatedUser.id = id;
+            }  
+            if (username !== undefined) {
+                updatedUser.username = username;
+            }  
+            if (first_name !== undefined) {
+                updatedUser.first_name = first_name;
+            }
+            if (last_name !== undefined) {
+                updatedUser.last_name = last_name;
+            }
+            if (email !== undefined) {
+                updatedUser.email = email;
+            }
+            if (password !== undefined) {
+                updatedUser.password = password;
+            }
+            if (isAdmin !== undefined) {
+                updatedUser.isAdmin = isAdmin;
+            }
+
+            // Remove current user from localStorage
+            localStorage.removeItem('currentUser');
+    
+            // Make a PATCH request to update the user
+            const response = await axios.patch(`${BASE_API_URL}/users/${id}`, updatedUser);
+
+            // Add the updated user back to localStorage
+            localStorage.setItem('currentUser', JSON.stringify(response.data));
+    
+            return response.data; // Return the updated user
+        } catch (error) {
+            throw new Error("Error updating user: " + error.message);
+        }
+    };
+    
     
 
 }
